@@ -26,11 +26,8 @@ public abstract class TooltipChangerMixin
 			ItemStack itemStack = ( ItemStack ) ( Object ) this;
 			ArrayList<Text> list = info.getReturnValue();
 
-			if (itemStack.hasNbt())
-			{
-				TooltipChanger tooltipMain = new TooltipChanger();
-				info.setReturnValue(tooltipMain.Main(client, itemStack, list));
-			}
+			TooltipChanger tooltipMain = new TooltipChanger();
+			info.setReturnValue(tooltipMain.Main(client, itemStack, list));
 		}
 	}
 }
